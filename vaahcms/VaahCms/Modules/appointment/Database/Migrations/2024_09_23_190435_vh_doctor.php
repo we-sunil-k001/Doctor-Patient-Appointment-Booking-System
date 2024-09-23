@@ -21,6 +21,14 @@ class VhDoctor extends Migration
 
                 $table->string('name')->nullable()->index();
                 $table->string('slug')->nullable()->index();
+
+                $table->string('email')->nullable();
+                $table->string('phone_number')->nullable();
+                $table->string('specialization')->nullable();
+                $table->string('qualification')->nullable();
+                $table->integer('experience')->nullable();
+                $table->enum('gender', ['male', 'female', 'other'])->nullable();
+
                 $table->boolean('is_active')->nullable()->index();
 
 

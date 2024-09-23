@@ -32,3 +32,4 @@ Route::group(
  * Include CRUD Routes
  */
 //include("backend/routes-example.php");
+include('doctor/routes-doctor.php');
