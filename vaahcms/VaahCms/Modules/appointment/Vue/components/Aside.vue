@@ -29,9 +29,9 @@ const items = ref([
                 route: "/"
             },
           {
-            label: 'blogs',
+            label: 'Doctors',
             icon: 'fa-regular fa-chart-bar',
-            route: "/doctor"
+            route: "/doctors"
           },
         ]
     },
