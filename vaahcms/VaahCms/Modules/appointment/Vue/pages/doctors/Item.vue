@@ -2,10 +2,10 @@
 import {onMounted, ref, watch} from "vue";
 import {useRoute} from 'vue-router';
 
-import { usedoctorStore } from '../../stores/store-doctors'
+import { useDoctorStore } from '../../stores/store-doctors'
 
 import VhViewRow from '../../vaahvue/vue-three/primeflex/VhViewRow.vue';
-const store = usedoctorStore();
+const store = useDoctorStore();
 const route = useRoute();
 
 onMounted(async () => {

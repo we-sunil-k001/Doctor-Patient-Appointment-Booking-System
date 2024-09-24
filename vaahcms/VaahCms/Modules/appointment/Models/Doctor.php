@@ -1,4 +1,4 @@
-<?php namespace VaahCms\Modules\appointment\Models;
+<?php namespace VaahCms\Modules\Appointment\Models;
 
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -10,14 +10,14 @@ use WebReinvent\VaahCms\Traits\CrudWithUuidObservantTrait;
 use WebReinvent\VaahCms\Models\User;
 use WebReinvent\VaahCms\Libraries\VaahSeeder;
 
-class doctor extends VaahModel
+class Doctor extends VaahModel
 {
 
     use SoftDeletes;
     use CrudWithUuidObservantTrait;
 
     //-------------------------------------------------
-    protected $table = 'vh_doctor';
+    protected $table = 'vh_doctors';
     //-------------------------------------------------
     protected $dates = [
         'created_at',

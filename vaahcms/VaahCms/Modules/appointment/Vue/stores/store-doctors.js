@@ -3,7 +3,7 @@ import {acceptHMRUpdate, defineStore} from 'pinia'
 import qs from 'qs'
 import {vaah} from '../vaahvue/pinia/vaah'
 
-let model_namespace = 'VaahCms\\Modules\\appointment\\Models\\doctor';
+let model_namespace = 'VaahCms\\Modules\\Appointment\\Models\\Doctor';
 
 
 let base_url = document.getElementsByTagName('base')[0].getAttribute("href");
@@ -26,7 +26,7 @@ let empty_states = {
     }
 };
 
-export const usedoctorStore = defineStore({
+export const useDoctorStore = defineStore({
     id: 'doctors',
     state: () => ({
         base_url: base_url,
@@ -938,5 +938,5 @@ export const usedoctorStore = defineStore({
 
 // Pinia hot reload
 if (import.meta.hot) {
-    import.meta.hot.accept(acceptHMRUpdate(usedoctorStore, import.meta.hot))
+    import.meta.hot.accept(acceptHMRUpdate(useDoctorStore, import.meta.hot))
 }

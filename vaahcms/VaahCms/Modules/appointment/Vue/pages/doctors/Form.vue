@@ -1,12 +1,12 @@
 <script setup>
 import {onMounted, ref, watch} from "vue";
-import { usedoctorStore } from '../../stores/store-doctors'
+import { useDoctorStore } from '../../stores/store-doctors'
 
 import VhField from './../../vaahvue/vue-three/primeflex/VhField.vue'
 import {useRoute} from 'vue-router';
 
 
-const store = usedoctorStore();
+const store = useDoctorStore();
 const route = useRoute();
 
 onMounted(async () => {

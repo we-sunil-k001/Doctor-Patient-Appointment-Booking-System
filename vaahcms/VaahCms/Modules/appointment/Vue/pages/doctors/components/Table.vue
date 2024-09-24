@@ -1,8 +1,8 @@
 <script setup>
 import { vaah } from '../../../vaahvue/pinia/vaah'
-import { usedoctorStore } from '../../../stores/store-doctors'
+import { useDoctorStore } from '../../../stores/store-doctors'
 
-const store = usedoctorStore();
+const store = useDoctorStore();
 const useVaah = vaah();
 
 </script>

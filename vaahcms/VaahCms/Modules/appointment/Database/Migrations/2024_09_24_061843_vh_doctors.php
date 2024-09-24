@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class VhDoctor extends Migration
+class VhDoctors extends Migration
 {
     /**
      * Run the migrations.
@@ -14,21 +14,13 @@ class VhDoctor extends Migration
     public function up()
     {
 
-        if (!Schema::hasTable('vh_doctor')) {
-            Schema::create('vh_doctor', function (Blueprint $table) {
+        if (!Schema::hasTable('vh_doctors')) {
+            Schema::create('vh_doctors', function (Blueprint $table) {
                 $table->bigIncrements('id')->unsigned();
                 $table->uuid('uuid')->nullable()->index();
 
                 $table->string('name')->nullable()->index();
                 $table->string('slug')->nullable()->index();
-
-                $table->string('email')->nullable();
-                $table->string('phone_number')->nullable();
-                $table->string('specialization')->nullable();
-                $table->string('qualification')->nullable();
-                $table->integer('experience')->nullable();
-                $table->enum('gender', ['male', 'female', 'other'])->nullable();
-
                 $table->boolean('is_active')->nullable()->index();
 
 
@@ -54,6 +46,6 @@ class VhDoctor extends Migration
     */
     public function down()
     {
-        Schema::dropIfExists('vh_doctor');
+        Schema::dropIfExists('vh_doctors');
     }
 }

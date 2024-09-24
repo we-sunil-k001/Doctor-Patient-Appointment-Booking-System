@@ -2,14 +2,14 @@
 import {onMounted, reactive, ref} from "vue";
 import {useRoute} from 'vue-router';
 
-import {usedoctorStore} from '../../stores/store-doctors'
+import {useDoctorStore} from '../../stores/store-doctors'
 import {useRootStore} from '../../stores/root'
 
 import Actions from "./components/Actions.vue";
 import Table from "./components/Table.vue";
 import Filters from './components/Filters.vue'
 
-const store = usedoctorStore();
+const store = useDoctorStore();
 const root = useRootStore();
 const route = useRoute();
 
@@ -18,7 +18,7 @@ const confirm = useConfirm();
 
 
 onMounted(async () => {
-    document.title = 'doctors - appointment';
+    document.title = 'Doctors - Appointment';
     store.item = null;
     /**
      * call onLoad action when List view loads
@@ -73,7 +73,7 @@ const toggleCreateMenu = (event) => {
 
                     <div class="flex flex-row">
                         <div >
-                            <b class="mr-1">doctors</b>
+                            <b class="mr-1">Doctors</b>
                             <Badge v-if="store.list && store.list.total > 0"
                                    :value="store.list.total">
                             </Badge>

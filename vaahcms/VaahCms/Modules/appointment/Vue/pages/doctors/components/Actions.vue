@@ -2,9 +2,9 @@
 import {ref, reactive, watch, onMounted} from 'vue';
 import {useRoute} from 'vue-router';
 
-import { usedoctorStore } from '../../../stores/store-doctors'
+import { useDoctorStore } from '../../../stores/store-doctors'
 
-const store = usedoctorStore();
+const store = useDoctorStore();
 const route = useRoute();
 
 onMounted(async () => {

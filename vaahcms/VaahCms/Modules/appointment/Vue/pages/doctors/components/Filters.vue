@@ -1,9 +1,9 @@
 <script  setup>
 
-import { usedoctorStore } from '../../../stores/store-doctors'
+import { useDoctorStore } from '../../../stores/store-doctors'
 import VhFieldVertical from './../../../vaahvue/vue-three/primeflex/VhFieldVertical.vue'
 
-const store = usedoctorStore();
+const store = useDoctorStore();
 
 </script>
 
